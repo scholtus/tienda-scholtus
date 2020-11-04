@@ -10,7 +10,7 @@ const App = () => {
   useEffect(() => {
     const backAction = () => {
       if (this.canGoBack) {
-        this.webviewRef.goBack()
+        webviewRef.goBack()
         return true
       }
     }
@@ -27,7 +27,7 @@ const App = () => {
     <WebView
       source={{ uri: 'https://scholtus.olistshops.com/' }}
       style={{ marginTop: Constants.statusBarHeight }}
-      ref={this.webviewRef}
+      ref={webviewRef}
       onNavigationStateChange={(navState) => {
         this.canGoBack = navState.canGoBack
       }}
